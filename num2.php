@@ -4,7 +4,7 @@ $product1 ='Стол';
 $product2 ='Стул';
 $product3 ='Столешница';
 
-$price1 ='2700';
+$price1 ='2702';
 $price2 ='1500';
 $price3 ='2780';
 
@@ -41,3 +41,18 @@ echo '<br>';
 print_r("\n{$product3}=> {$price3}руб");
 echo '<hr width="10%"align="left" >';
 echo "Самый дорогой <strong>",$max_product,"</strong> (стоит ", $max_prise, "руб)";
+
+//минимальная цена
+$max_prise_1 = $price1;
+$max_product_1 = $product1;
+
+if ($price2 < $max_prise_1) {
+        $max_prise_1 = $price2;
+        $max_product_1 = $product2;
+} 
+if ($price3 < $max_prise_1) {
+    $max_prise_1 = $price3;
+    $max_product_1 = $product3;
+} 
+echo '<br>';
+echo "Самый дешёвый <strong>",$max_product_1,"</strong> (стоит ", $max_prise_1, "руб)";
