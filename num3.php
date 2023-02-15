@@ -36,3 +36,18 @@ function max_prise($product1, $product2, $product3, $price1, $price2, $price3)
     echo "Самый дорогой <strong>",$max_product,"</strong> (стоит ", $max_prise, "руб)";
 }
 max_prise();
+
+//использование пароля
+$psw = 123;
+
+function enter($psw)
+{
+    $psw1 = 123;
+    if ($psw == $psw1) {
+        echo "Пароль верный";
+        }
+        else  {
+            echo "Ошибка в пароле";
+        }    
+}
+enter();
