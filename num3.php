@@ -3,11 +3,7 @@ $product1 ='Стол';
 $product2 ='Стул';
 $product3 ='Столешница';
 
-$price1 = rand(1,150);
-$price2 = rand(1,150);
-$price3 = rand(1,150);
-//$max_product ="";
-function max_prise($product1, $product2, $product3, $price1, $price2, $price3)
+function max_prisee($product1, $product2, $product3, $price1, $price2, $price3)
 {
     $max_product ='';
     $max_prise = '';
@@ -33,21 +29,35 @@ function max_prise($product1, $product2, $product3, $price1, $price2, $price3)
         $max_prise = $price3;
         $max_product = $product3;
     }
-    echo "Самый дорогой <strong>",$max_product,"</strong> (стоит ", $max_prise, "руб)";
+    echo "Самый дорогой <strong>",$max_product,"</strong> (стоит ", $max_prise, " руб)";
 }
-max_prise();
+
+print max_prisee($product1, $product2, $product3, 100, 200, 90);
+echo '<br>';
+print max_prisee($product1, $product2, $product3, 215, 200, 90);
+echo '<br>';
+print max_prisee($product1, $product2, $product3, 125, 200, 201);
+
 
 //использование пароля
-$psw = 123;
-
-function enter($psw)
+echo '<br>';
+echo '<br>';
+echo "Проверка пароля";
+echo '<br>';
+function control($psw)
 {
-    $psw1 = 123;
+    $psw1 = "123";
+    $otvet = "";
     if ($psw == $psw1) {
-        echo "Пароль верный";
+        $otvet = "Пароль верный";
         }
         else  {
-            echo "Ошибка в пароле";
-        }    
+            $otvet = "Ошибка в пароле";
+        }
+    return  $otvet;      
 }
-enter();
+print control("234");
+echo '<br>';
+print control("123");
+echo '<br>';
+print control(123);
